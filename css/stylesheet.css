@@ -1,15 +1,97 @@
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
 @import url(./normalize.css);
 
+/* 
+* {
+    box-sizing: border-box;
+} */
+
+html {
+    /* 기본은 16이지만 rem사용 편의를 위해 10으로 설정 */
+    font-size: 10px;
+}
+
 body {
     font-family: 'Spoqa Han Sans', 'sans-serif';
     font-weight: 400;
     background-color: #fff;
     color: #181818;
-    font-size: 1.4rem; /* 14px */
+    font-size: 1.4rem;
+    /* 14px */
 }
 
-html {
-    /* 기본은 16이지만 rem사용 편의를 위해 10으로 설정 */
-    font-size: 10px; 
+
+/* *로 하는 것보다 성능이 개선된다. body안에 포함되어 있는 모든 요소 */
+body *,
+body *::before,
+body *::after {
+    box-sizing: border-box;
+
+}
+
+/* 다른 방법(클래스가 있는 것만 바꾸기
+[class] {
+    box-sizing: border-box;
+} */
+
+/* 레이아웃 */
+.container {
+    background-color: silver;
+}
+
+.header,
+.visual,
+.main,
+.slogan,
+.footer-inner {
+    width: 940px;
+    margin: 0 auto;
+}
+
+.header {
+    background-color: yellow;
+    height: 10vh;
+}
+
+.visual {
+    background-color: lime;
+    height: 10vh;
+}
+
+.main {
+
+    background-color: blue;
+    height: 60vh;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.group1 {
+    background-color: pink;
+    width: 250px;
+}
+
+.group2 {
+    background-color: skyblue;
+    width: 380px;
+}
+
+.group3 {
+    background-color: orange;
+    width: 190px;
+}
+
+.slogan {
+    background-color: purple;
+    height: 10vh;
+}
+
+.footer {
+    background-color: tomato;
+}
+
+.footer-inner {
+    background-color: gray;
+    height: 10vh;
 }
