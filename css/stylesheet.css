@@ -1,0 +1,15 @@
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+@import url(./normalize.css);
+
+body {
+    font-family: 'Spoqa Han Sans', 'sans-serif';
+    font-weight: 400;
+    background-color: #fff;
+    color: #181818;
+    font-size: 1.4rem; /* 14px */
+}
+
+html {
+    /* 기본은 16이지만 rem사용 편의를 위해 10으로 설정 */
+    font-size: 10px; 
+}
