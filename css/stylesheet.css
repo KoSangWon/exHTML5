@@ -1,5 +1,20 @@
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+@import url(./fontello.css);
 @import url(./normalize.css);
+
+/* 숨김 콘텐츠 */
+.a11y-hidden {
+    background-color: red;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    visibility: hidden;
+    clip: rect(0, 0, 0, 0);
+    /* clip-path: polygon(0 0, 0 0, 0 0); */
+    clip-path: inset(50%);
+}
 
 /* 스타일 초기화 */
 a {
@@ -63,7 +78,7 @@ body *::after {
     position: relative;
     
     border-radius: 0 0 15px 15px;
-    padding: 0 30px 50px;
+    padding: 0 30px;
 }
 
 /* 로고 */
@@ -72,8 +87,9 @@ body *::after {
     margin-top: 0;
     /* h1은 자동으로 여백이 들어가있어서 초기화 */
     margin-bottom: 0;
-    top: 35px;
+    top: 45px;
     left: 65px;
+    z-index: 10;
 }
 
 .logo a {
@@ -115,10 +131,90 @@ body *::after {
     padding: 8px 10px;
     text-transform: uppercase;
 }
-/* 
-.member li:last-child a {
-    padding-right: 0;
-} */
+
+.navigation {
+    padding-bottom: 40px;
+}
+
+.menu {
+    background-color: orange;
+    /* background-image: linear-gradient(to bottom, orangered 0%, orange 35%, orange 70%, orangered 100%); *//*generator 툴 사용하지 않았을 때*/ 
+    background: #ff4500; /* gradient적용되지 않을 때 */
+    background: linear-gradient(to bottom, #ff4500 0%,#ffa500 45%,#ffa500 60%,#ff4500 100%);
+    padding-left: 225px;
+    margin: 0;
+    list-style: none;
+    box-shadow: 0 -2px 0 0 #000; /* border를 넣지 않고 그림자를 사용 */
+    /* border-top: 2px solid #000; */
+
+    border-radius: 0 0 5px 5px;
+    height: 45px;
+
+    position: relative;
+}
+
+.menu :focus {
+    outline: 0;
+}
+
+.menu-item {
+    position: relative;
+    float: left;
+    border-left: 2px solid #fff;
+}
+
+.menu-button {
+    display: block;
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 700;
+    padding: 0 20px;
+    line-height: 45px;
+    text-shadow: 1px 1px 0 #000, -1px -1px 0 #000;
+}
+
+.menu-act .menu-button {
+    color: #ff0;
+}
+
+/* menu에 검은 줄 */
+.menu-act .menu-button::after { 
+    content: "";
+    display: block;
+    border-top: 2px solid #000;
+}
+
+.sub-menu {
+    padding-left: 0;
+    margin: 0;
+    list-style: none;
+    display: none;
+    position: absolute;
+    top:47px;
+    /* width: 500px; */
+    white-space: nowrap;
+}
+
+.sub-menu li, .sub-menu a {
+    display: inline-block;
+}
+
+.sub-menu a {
+    padding: 10px 10px 10px 0;
+}
+
+.sub-menu1, .sub-menu2, .sub-menu3{
+    left: 0;
+}
+
+
+.sub-menu4, .sub-menu5, .sub-menu6 {
+    right: 0;
+}
+
+.sub-menu1 {
+    display: block;
+}
 
 .visual {
     background-color: lime;

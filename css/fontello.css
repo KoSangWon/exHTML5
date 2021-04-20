@@ -23,7 +23,6 @@
  [class^="icon-"]:before, [class*=" icon-"]:before {
   font-family: 'fontello';
   font-weight: normal;
-  speak: none;
  
   display: inline-block;
   text-decoration: inherit;
