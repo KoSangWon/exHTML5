@@ -26,7 +26,6 @@ body *,
 body *::before,
 body *::after {
     box-sizing: border-box;
-
 }
 
 /* 다른 방법(클래스가 있는 것만 바꾸기
@@ -48,9 +47,32 @@ body *::after {
     margin: 0 auto;
 }
 
+/* 헤더 */
 .header {
+    background-color: #fff;
+    position: relative; /* logo의 기준을 정해줌 */
+}
+
+/* 로고 */
+.logo {
+    position: absolute;
     background-color: yellow;
-    height: 10vh;
+    margin-top: 0; /* h1은 자동으로 여백이 들어가있어서 초기화 */
+    margin-bottom: 0;
+    top: 45px;
+    left: 65px;
+}
+
+.logo a {
+    display: block;
+    background-color: pink;
+}
+.logo img {
+    vertical-align: middle;
+}
+
+.member {
+    margin: 0;
 }
 
 .visual {
