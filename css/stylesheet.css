@@ -21,7 +21,7 @@ body {
 }
 
 
-/* *로 하는 것보다 성능이 개선된다. body안에 포함되어 있는 모든 요소 */
+/* *로 하는 것보다 성능이 개선된다. body안에 포함되어 있는 모든 요소 (head안에 선택은 안할 것이다.) before, after 이유는 혹시 모를 상황 즉, container와 body 사이의 공간에 무언가 내용이 들어가는 상황을 위한 것이다.*/
 body *,
 body *::before,
 body *::after {
@@ -59,17 +59,31 @@ body *::after {
 }
 
 .main {
-
     background-color: blue;
+    display: flow-root;
+    padding: 30px 15px;
+    /* padding: 30px;  
+    display: flex; flex로 하는 방법
+    justify-content: space-between; */
+    /* overflow: hidden; */
+}
+
+.group {
     height: 60vh;
-    padding: 30px;
-    display: flex;
-    justify-content: space-between;
+    float: left;
+    margin: 0 15px;
+}
+
+.main::after {
+    content: "";
+    clear: both;
+    display: block;
 }
 
 .group1 {
     background-color: pink;
     width: 250px;
+    float: right;
 }
 
 .group2 {
