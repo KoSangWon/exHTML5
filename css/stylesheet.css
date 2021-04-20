@@ -1,10 +1,19 @@
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
 @import url(./normalize.css);
 
-/* 
-* {
-    box-sizing: border-box;
-} */
+/* 스타일 초기화 */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    color: blue;
+}
+
+a:focus {
+    color: green;
+}
 
 html {
     /* 기본은 16이지만 rem사용 편의를 위해 10으로 설정 */
@@ -50,30 +59,66 @@ body *::after {
 /* 헤더 */
 .header {
     background-color: #fff;
-    position: relative; /* logo의 기준을 정해줌 */
+    /* logo의 기준을 정해줌 */
+    position: relative;
+    
+    border-radius: 0 0 15px 15px;
+    padding: 0 30px 50px;
 }
 
 /* 로고 */
 .logo {
     position: absolute;
-    background-color: yellow;
-    margin-top: 0; /* h1은 자동으로 여백이 들어가있어서 초기화 */
+    margin-top: 0;
+    /* h1은 자동으로 여백이 들어가있어서 초기화 */
     margin-bottom: 0;
-    top: 45px;
+    top: 35px;
     left: 65px;
 }
 
 .logo a {
     display: block;
-    background-color: pink;
 }
+
 .logo img {
     vertical-align: middle;
 }
 
+/* 안내 링크 */
 .member {
     margin: 0;
+    padding-left: 0;
+    list-style: none;
+    color: red;
+    font-size: 0;
+    /* 이 것을 상속 시켜줌으로써 <span> 사이의 공백을 없애준다. */
+    text-align: right;
+    padding-top: 2px;
+    /* 왜 a태그에 8px 주고 여기에 2px 줬나? Outline 때문! */
+    padding-bottom: 2px;
+
+    /* UI 착시효과 만들기 */
+    position: relative;
+    left: 10px;
 }
+
+.member li {
+    /* background-color: yellow; */
+    display: inline-block;
+    font-size: 14px;
+}
+
+.member a {
+    display: inline-block;
+    /* padding-top: 8px;
+    padding-bottom: 8px; a태그의 범위를 넓혀줌(사용성 증가) */
+    padding: 8px 10px;
+    text-transform: uppercase;
+}
+/* 
+.member li:last-child a {
+    padding-right: 0;
+} */
 
 .visual {
     background-color: lime;
