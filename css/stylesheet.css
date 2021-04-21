@@ -216,9 +216,82 @@ body *::after {
     display: block;
 }
 
+/* 비주얼 */
+@keyframes textAni {
+    0% {
+        font-size: 12px;
+        color: rgba(0, 0, 0, 0);
+        /* margin, padding시도해봄 */ 
+        /* top: 0;
+        left: 0; */
+        transform: translate(0, 0);
+    }
+    100% {
+        font-size: 24px;
+        color: rgba(0, 0, 0, 1);
+        /* top: 75px;
+        left: 400px; */
+        transform: translate(400px, 75px); /* reflow가 적게 일어나서 성능이 좋다. */
+    }
+}
+
+@keyframes flowerAni {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
 .visual {
     background-color: lime;
-    height: 10vh;
+    height: 120px; /* 크기가 변할 가능성이 없는 것은 높이를 고정시키자.*/
+    position: relative;
+}
+
+.visual::before,
+.visual::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-repeat: no-repeat;
+/*     
+    animation-name: flowerAni;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate; */
+    animation: flowerAni 2s infinite alternate 1s;
+}
+
+.visual::before {
+    background-image: url(./images/ani_flower_01.png), url(./images/ani_flower_02.png);
+    background-position: 0 -10px, 670px 0;
+    /* background: url(./images/ani_flower_01.png) no-repeat 0 -10px, pink url(./images/ani_flower_02.png) no-repeat 670px 0; */
+}
+
+.visual::after {
+    background-image: url(./images/ani_flower_03.png), url(./images/ani_flower_04.png);
+    background-position: 300px 10px, 800px 5px;
+    animation-delay: 1s;
+}
+
+.visual-text {
+    /* position: absolute; */
+    position: relative;
+    z-index: 10;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    /* background-color: yellow; */
+    margin: 0; /* <p>태그에 기본적으로 들어가는 1em의 위아래 margin을 제거 */
+    animation-name: textAni;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    /* width: 500px; */ /* 1번째 방법 */
+    display: inline-block; /* 2번째 방법 */
+    /* float:left; */
 }
 
 .main {
