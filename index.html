@@ -141,7 +141,30 @@
         </div>
         <main class="main">
             <!-- div.group.group$*3{group$} -->
-            <div class="group group1">group1</div>
+            <div class="group group1">
+                <section class="login">
+                    <h2 class="login-heading">로그인</h2>
+                    <form action="https://formspree.io/seulbinim@gmail.com" method="POST" class="login-form">
+                        <fieldset>
+                            <legend class="a11y-hidden">로그인 폼</legend>
+                            <!--이전에 선언해 놓은 숨김 컨텐츠 클래스 a11y-hidden 를 사용핻도 되고 legend를 숨김 컨텐츠로 지정해도 된다. -->
+                            <div class="user-email">
+                                <label for="userEmail">아이디</label>
+                                <input type="email" required placeholder="이메일 주소" id="userEmail" name="userEmail" />
+                            </div>
+                            <div class="user-pwd">
+                                <label for="userPwd">비밀번호</label>
+                                <input type="password" required placeholder="비밀번호" id="userPwd" name="userPwd" />
+                            </div>
+                            <button class="btn-login" type="submit">로그인</button>
+                        </fieldset>
+                    </form>
+                    <ul class="sign">
+                        <li><a href="#"><span class="icon-right-open"></span>회원가입</a></li>
+                        <li><a href="#"><span class="icon-right-open"></span>아이디/비밀번호 찾기</a></li>
+                    </ul>
+                </section>
+            </div>
             <div class="group group2">group2</div>
             <div class="group group3">group3</div>
         </main>
