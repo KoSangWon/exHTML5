@@ -21,14 +21,14 @@ a {
     text-decoration: none;
     color: inherit;
 }
-
+/* 
 a:hover {
     color: blue;
 }
 
 a:focus {
     color: green;
-}
+} */
 
 html {
     /* 기본은 16이지만 rem사용 편의를 위해 10으로 설정 */
@@ -422,6 +422,22 @@ body *::after {
 
 .sign .icon-right-open::before {
     color: #e25a2d;
+}
+
+/* 유효성 배너 검사 */
+.validation-list {
+    margin: 25px 0 0 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+.validation-list a {
+    display: block;
+    border: 1px solid #aaa;
+    margin-top: 10px;
+    border-radius: 25px;
+    padding: 7px 10px 5px 45px;
+    background: url(images/validation_icon.png) no-repeat 20px 50%, #ccc linear-gradient(180deg, #ccc, #eee);
 }
 
 .slogan {
