@@ -3,7 +3,8 @@
 @import url(./normalize.css);
 
 /* 숨김 콘텐츠 */
-.a11y-hidden, legend {
+.a11y-hidden,
+legend {
     background-color: red;
     position: absolute;
     width: 1px;
@@ -21,6 +22,7 @@ a {
     text-decoration: none;
     color: inherit;
 }
+
 /* 
 a:hover {
     color: blue;
@@ -79,7 +81,7 @@ body *::after {
     background-color: #fff;
     /* logo의 기준을 정해줌 */
     position: relative;
-    
+
     border-radius: 0 0 15px 15px;
     padding: 0 30px;
 }
@@ -141,13 +143,16 @@ body *::after {
 
 .menu {
     background-color: orange;
-    /* background-image: linear-gradient(to bottom, orangered 0%, orange 35%, orange 70%, orangered 100%); *//*generator 툴 사용하지 않았을 때*/ 
-    background: #ff4500; /* gradient적용되지 않을 때 */
-    background: linear-gradient(to bottom, #ff4500 0%,#ffa500 45%,#ffa500 60%,#ff4500 100%);
+    /* background-image: linear-gradient(to bottom, orangered 0%, orange 35%, orange 70%, orangered 100%); */
+    /*generator 툴 사용하지 않았을 때*/
+    background: #ff4500;
+    /* gradient적용되지 않을 때 */
+    background: linear-gradient(to bottom, #ff4500 0%, #ffa500 45%, #ffa500 60%, #ff4500 100%);
     padding-left: 225px;
     margin: 0;
     list-style: none;
-    box-shadow: 0 -2px 0 0 #000; /* border를 넣지 않고 그림자를 사용 */
+    box-shadow: 0 -2px 0 0 #000;
+    /* border를 넣지 않고 그림자를 사용 */
     /* border-top: 2px solid #000; */
 
     border-radius: 0 0 5px 5px;
@@ -181,7 +186,7 @@ body *::after {
 }
 
 /* menu에 검은 줄 */
-.menu-act .menu-button::after { 
+.menu-act .menu-button::after {
     content: "";
     display: block;
     border-top: 2px solid #000;
@@ -193,12 +198,13 @@ body *::after {
     list-style: none;
     display: none;
     position: absolute;
-    top:47px;
+    top: 47px;
     /* width: 500px; */
     white-space: nowrap;
 }
 
-.sub-menu li, .sub-menu a {
+.sub-menu li,
+.sub-menu a {
     display: inline-block;
 }
 
@@ -206,12 +212,16 @@ body *::after {
     padding: 10px 10px 10px 0;
 }
 
-.sub-menu1, .sub-menu2, .sub-menu3{
+.sub-menu1,
+.sub-menu2,
+.sub-menu3 {
     left: 0;
 }
 
 
-.sub-menu4, .sub-menu5, .sub-menu6 {
+.sub-menu4,
+.sub-menu5,
+.sub-menu6 {
     right: 0;
 }
 
@@ -224,17 +234,19 @@ body *::after {
     0% {
         font-size: 12px;
         color: rgba(0, 0, 0, 0);
-        /* margin, padding시도해봄 */ 
+        /* margin, padding시도해봄 */
         /* top: 0;
         left: 0; */
         transform: translate(0, 0);
     }
+
     100% {
         font-size: 24px;
         color: rgba(0, 0, 0, 1);
         /* top: 75px;
         left: 400px; */
-        transform: translate(400px, 75px); /* reflow가 적게 일어나서 성능이 좋다. */
+        transform: translate(400px, 75px);
+        /* reflow가 적게 일어나서 성능이 좋다. */
     }
 }
 
@@ -242,6 +254,7 @@ body *::after {
     0% {
         opacity: 1;
     }
+
     100% {
         opacity: 0;
     }
@@ -249,7 +262,8 @@ body *::after {
 
 .visual {
     /* background-color: lime; */
-    height: 120px; /* 크기가 변할 가능성이 없는 것은 높이를 고정시키자.*/
+    height: 120px;
+    /* 크기가 변할 가능성이 없는 것은 높이를 고정시키자.*/
     position: relative;
 }
 
@@ -262,7 +276,7 @@ body *::after {
     left: 0;
     top: 0;
     background-repeat: no-repeat;
-/*     
+    /*     
     animation-name: flowerAni;
     animation-duration: 2s;
     animation-iteration-count: infinite;
@@ -288,12 +302,15 @@ body *::after {
     z-index: 10;
     font-family: Georgia, 'Times New Roman', Times, serif;
     /* background-color: yellow; */
-    margin: 0; /* <p>태그에 기본적으로 들어가는 1em의 위아래 margin을 제거 */
+    margin: 0;
+    /* <p>태그에 기본적으로 들어가는 1em의 위아래 margin을 제거 */
     animation-name: textAni;
     animation-duration: 3s;
     animation-fill-mode: forwards;
-    /* width: 500px; */ /* 1번째 방법 */
-    display: inline-block; /* 2번째 방법 */
+    /* width: 500px; */
+    /* 1번째 방법 */
+    display: inline-block;
+    /* 2번째 방법 */
     /* float:left; */
 }
 
@@ -342,7 +359,8 @@ body *::after {
     border-radius: 5px;
     padding: 15px 10px 10px 10px;
     box-shadow: 5px 5px 0 0 #ccc;
-    background: #e29c2b radial-gradient(circle at right top, #e29c2b, #e25a2d); /* 앞에꺼는 gradient 안먹힐 때를 대비 */
+    background: #e29c2b radial-gradient(circle at right top, #e29c2b, #e25a2d);
+    /* 앞에꺼는 gradient 안먹힐 때를 대비 */
 }
 
 .login-heading {
@@ -372,13 +390,13 @@ body *::after {
 .login-form label {
     display: inline-block;
     font-size: 1.2rem;
-    width:4em;
+    width: 4em;
     vertical-align: middle;
     cursor: pointer;
 }
 
 .login-form input {
-    border:  1px solid #ccc;
+    border: 1px solid #ccc;
     padding: 2px 2px 2px 5px;
     width: 95px;
     font-size: 1.2rem;
@@ -471,17 +489,17 @@ body *::after {
     float: left;
 }
 
-.term-list-subject:not(:first-child), 
-.term-list-subject:not(:first-child) + .term-list-thumbnail:not(:first-child) {
+.term-list-subject:not(:first-child),
+.term-list-subject:not(:first-child)+.term-list-thumbnail:not(:first-child) {
     margin-top: 10px;
 }
 
-.term-list-subject:nth-child(even) + .term-list-thumbnail + .term-list-brief {
+.term-list-subject:nth-child(even)+.term-list-thumbnail+.term-list-brief {
     /* background-color: beige; */
-    float:left;
+    float: left;
 }
 
-.term-list-subject:nth-child(even) + .term-list-thumbnail {
+.term-list-subject:nth-child(even)+.term-list-thumbnail {
     float: right;
 }
 
@@ -505,7 +523,8 @@ body *::after {
 
 
 .term-list-thumbnail img {
-    display: block; /* 이미지 아래에 빈 공간이 있다. <span>에서 아래에 빈공간 살짝 있는 것 과 같은 원리. 따라서 img를 block으로 만들어줘서 아래 공간을 없애줌. */
+    display: block;
+    /* 이미지 아래에 빈 공간이 있다. <span>에서 아래에 빈공간 살짝 있는 것 과 같은 원리. 따라서 img를 block으로 만들어줘서 아래 공간을 없애줌. */
 }
 
 .term-list-brief {
@@ -563,6 +582,81 @@ body *::after {
 .term-list-thumbnail {
     float: left;
 } */
+
+
+/* 검색 폼 */
+.search-form {
+    background: #ccc linear-gradient(180deg, #ccc, #eee);
+    border: 1px solid #aaa;
+    border-bottom-color: #fff;
+    border-radius: 15px 15px 0 0;
+    padding: 15px 25px 10px;
+}
+
+.search-form fieldset {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+.search-form-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.search-form label {
+    cursor: pointer;
+}
+
+[name="search"] { /* 속성 선택자도 써보자~ */ 
+    width: 200px;
+    height: 24px;
+    border: 1px solid #aaa;
+    border-radius: 2px;
+    padding: 2px 2px 2px 5px;
+}
+
+.btn-search {
+    background-color: #222;
+    color: #fff;
+    border: 0;
+    padding: 0 10px;
+    border-radius: 3px;
+    font-size: 1.3rem;
+}
+
+
+/* .search-form {
+    background: #ccc linear-gradient(180deg, #ccc, #eee);
+    border-radius: 15px 15px 0 0;
+    border: 1px solid gray;
+    border-bottom: none;
+    padding: 10px;
+}
+
+.search-form fieldset {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0 none;
+}
+
+.search-input label,
+.search-input input {
+    margin-right: 10px;
+}
+
+.search-input input {
+    max-width: 150px;
+}
+
+.btn-search {
+    background-color: black;
+    color: white;
+    padding: 4px;
+    vertical-align: middle;
+} */
+
 
 .slogan {
     background-color: purple;
