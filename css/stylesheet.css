@@ -440,6 +440,130 @@ body *::after {
     background: url(images/validation_icon.png) no-repeat 20px 50%, #ccc linear-gradient(180deg, #ccc, #eee);
 }
 
+/* 웹 관련 용어 */
+
+.term {
+    background: #ccc linear-gradient(180deg, #ccc, #eee);
+    margin-top: 20px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    padding: 15px 15px;
+}
+
+.term-heading {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.term-list {
+    margin: 10px 0 0 0;
+    display: flow-root;
+    /* display: flex;
+    flex-direction: column; */
+}
+
+/* .term .odd, .term .even {
+    display: flow-root;
+} */
+
+.term-list-subject:nth-child(even) {
+    float: left;
+}
+
+.term-list-subject:not(:first-child), 
+.term-list-subject:not(:first-child) + .term-list-thumbnail:not(:first-child) {
+    margin-top: 10px;
+}
+
+.term-list-subject:nth-child(even) + .term-list-thumbnail + .term-list-brief {
+    /* background-color: beige; */
+    float:left;
+}
+
+.term-list-subject:nth-child(even) + .term-list-thumbnail {
+    float: right;
+}
+
+/* 
+.term .even .term-list-subject,
+.term .even .term-list-brief {
+    float: left;
+} */
+
+.term-list-subject {
+    float: right;
+    width: 145px;
+    color: #296897;
+}
+
+.term-list-thumbnail {
+    float: left;
+    margin-bottom: 0;
+    margin-left: 0;
+}
+
+
+.term-list-thumbnail img {
+    display: block; /* 이미지 아래에 빈 공간이 있다. <span>에서 아래에 빈공간 살짝 있는 것 과 같은 원리. 따라서 img를 block으로 만들어줘서 아래 공간을 없애줌. */
+}
+
+.term-list-brief {
+    float: right;
+    width: 145px;
+    margin-left: 0;
+    margin-top: 5px;
+    line-height: 1.5;
+}
+
+
+/* .term {
+    background: silver linear-gradient(180deg, #ccc, #eee);
+    border-radius: 10px;
+    margin-top: 20px;
+    border-top: 1px solid transparent;
+    padding: 15px 15px 3px 15px;
+    border: 1px solid #ccc;
+}
+
+.term-heading {
+    margin: 0;
+    padding: 0;
+    font-size: 1.6rem;
+}
+
+.term-list {
+
+}
+
+.term-list div {
+    display: flow-root;
+}
+
+.term-list dd {
+    margin-left: 0;
+}
+
+.term-list-subject {
+    width: 145px;
+    float: right;
+    color: blue;
+    font-weight: 500;
+    font-size: 1.4rem;
+}
+
+.term-list-brief {
+    float: right;
+    width: 145px;
+    padding-top: 10px;
+    font-size: 1.4rem;
+    line-height: 1.5;
+}
+
+.term-list-thumbnail {
+    float: left;
+} */
+
 .slogan {
     background-color: purple;
     height: 10vh;
