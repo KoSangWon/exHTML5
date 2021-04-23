@@ -608,7 +608,8 @@ body *::after {
     cursor: pointer;
 }
 
-[name="search"] { /* 속성 선택자도 써보자~ */ 
+[name="search"] {
+    /* 속성 선택자도 써보자~ */
     width: 200px;
     height: 24px;
     border: 1px solid #aaa;
@@ -669,8 +670,10 @@ body *::after {
     /* height: 200px; */
 }
 
-.notice-list, .pds-list,
-.notice-more, .pds-more {
+.notice-list,
+.pds-list,
+.notice-more,
+.pds-more {
     display: none;
 }
 
@@ -712,7 +715,8 @@ body *::after {
     left: 82px;
 }
 
-.notice-list, .pds-list {
+.notice-list,
+.pds-list {
     /* position: absolute;
     top: 45px;
     right: 0; */
@@ -741,7 +745,8 @@ body *::after {
     flex: 1 1 0; // grow shrink basis
 } */
 
-.notice-more, .pds-more {
+.notice-more,
+.pds-more {
     position: absolute;
 
     /* 사용성을 위한 트릭 */
@@ -831,6 +836,143 @@ body *::after {
 
 .icon-plus {
     color: green;
+} */
+
+
+/* 새소식 */
+
+.news {
+    margin-top: 20px;
+    position: relative;
+}
+
+.news::before {
+    content: "";
+    position: absolute;
+    top: 35px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #ccc linear-gradient(90deg, #999, #eee);
+}
+
+.news-heading {
+    color: #e25a2d;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.news-item {
+    margin-top: 35px;
+    padding-left: 130px;
+    position: relative;
+}
+
+.news-item-heading {
+    font-weight: 700;
+    margin: 0;
+}
+
+.news-item-date {
+    display: block;
+    margin-top: 5px;
+}
+
+.news-item-brief {
+    line-height: 1.5;
+    margin: 10px 0 0 0;
+}
+
+.news-item-thumbnail {
+    margin: 0;
+    position: absolute;
+    top: 2px;
+    left: 0;
+    text-align: center;
+}
+
+.news-item-thumbnail img {
+    margin-bottom: 15px;
+    box-shadow: 0 15px 20px 0px rgba(0, 0, 0, 0.3);
+}
+
+.news-more {
+    position: absolute;
+    padding: 8px;
+    top: -8px;
+    right: -8px;
+}
+
+/* 
+.news {
+    margin-top: 20px;
+    position: relative;
+}
+
+.news-heading {
+    color: #e25a2d;
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.news-more {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    padding: 8px;
+}
+
+.news-item {
+    display: flow-root;
+    padding-top: 20px;
+}
+
+.news-heading::after {
+    content: '';
+    margin-top: 20px;
+    display: block;
+    height: 2px;
+    background: #000 linear-gradient(90deg, #999, #eee);
+}
+
+.news-item-date {
+    float: right;
+    width: 250px;
+    margin: 0 0 15px 0;
+    font-weight: 500;
+
+}
+
+.news-item-heading {
+    float: right;
+    width: 250px;
+    padding: 0;
+    margin: 0 0 3px 0;
+}
+
+.news-item-brief {
+    float: right;
+    width: 250px;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.news-item-thumbnail {
+    position: absolute;
+    background-color: white;
+    margin: 0 0 17px 0;
+    text-align: center;
+}
+
+.news-item-thumbnail img {
+    box-shadow: 0 5px 10px #000;
+}
+
+#newsThumbnail {
+    padding-top: 10px;
+    font-weight: 500;
 } */
 
 .slogan {
