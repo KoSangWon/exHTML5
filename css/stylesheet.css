@@ -658,6 +658,181 @@ body *::after {
 } */
 
 
+
+/* 공지사항 및 자료실 */
+.board {
+    margin-top: 20px;
+    position: relative;
+    padding-top: 40px;
+    min-height: 170px;
+    /* overflow: hidden; */
+    /* height: 200px; */
+}
+
+.notice-list, .pds-list,
+.notice-more, .pds-more {
+    display: none;
+}
+
+.tab-act .notice-list,
+.tab-act .pds-list,
+.tab-act .notice-more,
+.tab-act .pds-more {
+    display: block;
+}
+
+.tab {
+    position: absolute;
+    top: 0;
+    font-size: 1em;
+    font-weight: 400;
+    margin: 0;
+}
+
+.tab a {
+    display: block;
+    border: 1px solid #aaa;
+    border-radius: 5px 5px 0 0;
+    color: #999;
+    background: #ccc linear-gradient(180deg, #ccc, #eee);
+    padding: 8px 15px 7px;
+}
+
+.tab-act .tab a {
+    background: #fff;
+    border-color: #e25a2d #e25a2d #fff #e25a2d;
+    color: #e25a2d;
+}
+
+.notice-heading {
+    left: 0;
+}
+
+.pds-heading {
+    left: 82px;
+}
+
+.notice-list, .pds-list {
+    /* position: absolute;
+    top: 45px;
+    right: 0; */
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+.notice-list li,
+.pds-list li {
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0;
+}
+
+.notice-list li a {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* icon-dot-circled를 a에 주지 않고 li에 주면 아래와 같이 해결 가능 */
+/* .notice-list a,
+.pds-list a {
+    display: flex;
+    flex: 1 1 0; // grow shrink basis
+} */
+
+.notice-more, .pds-more {
+    position: absolute;
+
+    /* 사용성을 위한 트릭 */
+    top: 0px;
+    right: -8px;
+    padding: 8px;
+}
+
+.icon-plus {
+    color: hsla(110, 50%, 30%, 1);
+}
+
+
+/* .board {
+    margin-top: 20px;
+    position: relative;
+}
+
+.notice-list, .pds-list, .notice-more, .pds-more {
+    display: none;
+}
+
+.tab-act .notice-list, .tab-act .notice-more{
+    display: block;
+}
+
+.tab {
+    margin: 0;
+    font-size: 1.6rem;
+    padding: 10px;
+}
+
+.board h2 {
+    border: 1px solid black;
+    border-radius: 8px 8px 0 0;
+    padding: 10px 10px 5px 10px;
+    font-weight: 400;
+}
+.board .tab-act h2 {
+    border-color: red;
+    border-bottom: none;
+    color: red;
+}
+
+.pds-heading {
+    background: #ccc linear-gradient(180deg, #ccc, #eee);
+}
+
+.notice-heading{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.pds-heading{
+    position: absolute;
+    top: 0;
+    left: 82px;
+}
+
+.notice-list, .pds-list {
+    position: absolute;
+    top: 50px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding-top: 50px;
+}
+
+.notice-list li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.notice-list li a {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.notice-more {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.icon-plus {
+    color: green;
+} */
+
 .slogan {
     background-color: purple;
     height: 10vh;
