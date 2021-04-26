@@ -1014,7 +1014,7 @@ body *::after {
 .gradient-box {
     background: #ccc linear-gradient(180deg, #ccc, #eee);
     border-radius: 5px;
-    padding: 10px;
+    padding: 12px 10px;
 }
 
 .accent-color {
@@ -1027,7 +1027,7 @@ body *::after {
     border-bottom: 1px solid #aaa;;
 }
 
-.event-heading {
+.event-heading, .related-heading {
     font-size: 1.5rem;
     font-weight: 700;
     margin: 0;
@@ -1121,6 +1121,49 @@ button.btn-event-next { /* 우선순위 주의!! 높여주기 위해 앞에 butt
 .event-brief em {
     display: block;
 } */
+
+
+.related {
+    padding-top: 12px;
+}
+
+.related-list {
+    background-color: white;
+    border: 1px solid #ccc;
+    list-style: none;
+    margin-bottom: 0;
+    padding-left: 0;
+    overflow: hidden;
+    height: 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.4s;
+    /* height먼저 transition후 padding transition */
+    /* transition-property: height, padding, background-color; 
+    transition-duration: 0.5s, 0.2s, 0.5s;
+    transition-delay: 0s, 0.5s, 0.7s; */
+    /* 단축하여 사용 하는 방법 */
+    /* transition: height 0.5s 0s, padding 0.2s 0.5s, background-color 0.5s 0.7s; */
+}
+
+.related-list:hover,
+.related-list:focus {
+    height: 145px;
+    padding: 10px 0;
+    /* background-color: pink; */
+}
+
+/* focus했을 때 outline이 보이게 하기 위해 outline 크기만큼인 2px padding을 준다. */
+.related-list li {
+    padding: 2px;
+}
+
+.related-list a {
+    height: 21px;
+    display: block;
+    line-height: 21px;
+    padding-left: 20px;
+}
 
 
 .slogan {
