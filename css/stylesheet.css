@@ -1027,7 +1027,7 @@ body *::after {
     border-bottom: 1px solid #aaa;;
 }
 
-.event-heading, .related-heading {
+.event-heading, .related-heading, .favorite-heading {
     font-size: 1.5rem;
     font-weight: 700;
     margin: 0;
@@ -1165,6 +1165,63 @@ button.btn-event-next { /* 우선순위 주의!! 높여주기 위해 앞에 butt
     padding-left: 20px;
 }
 
+
+/* 인기 사이트 */
+.favorite {
+    margin-top: 20px;
+    position: relative;
+}
+
+.favorite-list {
+    /* background-color: yellow; */
+    margin-bottom: 0;
+    padding-left: 0;
+    /* overflow: hidden; */
+    list-style: none;
+}
+
+.favorite-list li {
+    counter-increment: number;
+    margin-top: 5px; /* margin collapse로 인해 위에 추가 안됨. */
+    position: relative;
+    /* font-size: 20px; */
+}
+
+.favorite-list li::before {
+    display: inline-block;
+    content: counter(number);
+    color: #fff;
+    background-color: #aaa;
+    padding: 2px 5px;
+    font-size: 1.2rem;
+    border-radius: 2px;
+}
+
+.up, .stop, .down {
+    width: 9px;
+    height: 11px;
+    background-color: aqua;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: -5px;
+    background: url('./images/rank.png') no-repeat 0 0;
+}
+
+.stop {
+    background-position: 0 50%;
+}
+
+.down {
+    background-position: 0 100%;
+}
+
+.favorite-more {
+    position: absolute;
+    padding: 8px;
+    top: 4px;
+    right: 2px;
+}
 
 .slogan {
     background-color: purple;
