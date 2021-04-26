@@ -1010,6 +1010,119 @@ body *::after {
     font-weight: 500;
 } */
 
+/* 신규 이벤트 및 관련 사이트 */
+.gradient-box {
+    background: #ccc linear-gradient(180deg, #ccc, #eee);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.accent-color {
+    color: #e25a2d;
+}
+
+.event {
+    display: flex;
+    flex-flow: row wrap;
+    border-bottom: 1px solid #aaa;;
+}
+
+.event-heading {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+    width: 50%;
+}
+
+.btn-event {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* 우선순위가 문제인지 보고 싶을 때는 !important 설정해서 확인 */
+button.btn-event-next { /* 우선순위 주의!! 높여주기 위해 앞에 button을 명시해줌 */
+    background-position: -35px 0 !important;
+}
+
+.event-thumbnail img {
+    box-shadow: 5px 5px 0 0 #aaa;
+}
+
+.event em {
+    font-style: normal;
+}
+
+.btn-event-next, .btn-event-prev {
+    overflow: hidden;
+    width: 19px;
+    height: 18px;
+    border: 0;
+    padding: 18px 0 0 0;
+    background: transparent url(./images/back_forward.png) no-repeat 0 0;
+}
+
+
+
+/* .gradient-box {
+    padding: 15px;
+    background: #ccc linear-gradient(0deg, #eee, #ccc);
+}
+
+.event {
+    position: relative;
+    padding-top: 20px;
+}
+
+.event-heading {
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 1.6rem;
+}
+
+.btn-event-prev {
+    background-image: url('./images/back_forward.png');
+    background-repeat: no-repeat;
+    padding: 9px;
+    font-size: 0;
+}
+
+.accent-color {
+    color: #e25a2d;
+}
+
+.btn-event-next {
+    background-image: url('./images/back_forward.png');
+    background-repeat: no-repeat;
+    padding: 9px;
+    background-position: -36px 0;
+    font-size: 0;
+}
+
+.btn-event {
+    position: absolute;
+    top: -5px;
+    right: 0;
+}
+
+.event-detail {
+
+}
+
+.event-brief {
+    font-size: 1.3rem;
+    line-height: 1.5;
+    padding-bottom: 10px;
+    border-bottom: 1px solid black;
+}
+
+.event-brief em {
+    display: block;
+} */
+
+
 .slogan {
     background-color: purple;
     height: 10vh;
